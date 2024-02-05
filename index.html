@@ -1,19 +1,61 @@
-<section id="livres">
-    <h2>Nos Livres</h2>
-    <div class="livre">
-        <h3>Titre du Livre 1</h3>
-        <p>Auteur: Nom de l'auteur 1</p>
-        <p>Genre: Genre du livre 1</p>
-        <button onclick="emprunterLivre('Titre du Livre 1')">Emprunter</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue de Livres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .book {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .book-title {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .author {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Catalogue de Livres</h1>
+
+    <div class="book">
+        <img src="livre1.jpg" alt="Livre 1">
+        <div class="book-title">Titre du Livre 1</div>
+        <div class="author">Auteur 1</div>
     </div>
 
-    <div class="livre">
-        <h3>Titre du Livre 2</h3>
-        <p>Auteur: Nom de l'auteur 2</p>
-        <p>Genre: Genre du livre 2</p>
-        <button onclick="emprunterLivre('Titre du Livre 2')">Emprunter</button>
+    <div class="book">
+        <img src="livre2.jpg" alt="Livre 2">
+        <div class="book-title">Titre du Livre 2</div>
+        <div class="author">Auteur 2</div>
     </div>
 
-    <!-- Ajoutez plus de livres selon le même modèle -->
+    <!-- Ajoutez plus de livres de la même manière -->
 
-</section>
+</body>
+</html>
