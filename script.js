@@ -1,2 +1,4 @@
-// Vous pouvez ajouter ici des fonctionnalités JavaScript pour manipuler les livres, par exemple la recherche, l'emprunt, etc.
-// Pour l'instant, le script est vide.
+function emprunterLivre(titre) {
+    alert('Livre emprunté : ' + titre);
+    // Vous pouvez ajouter ici du code pour gérer l'emprunt du livre dans une base de données, par exemple.
+}
