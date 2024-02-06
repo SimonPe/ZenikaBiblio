@@ -18,15 +18,25 @@
 
         .logo {
             position: absolute;
-            top: -10px; /* Ajustement de la position vers le haut */
+            top: -26px; /* Ajustement de la position vers le haut */
             left: 10px;
             width: 100px; /* Taille du logo */
         }
 
         .search-bar {
             position: absolute;
-            top: -10px; /* Ajustement de la position vers le haut */
-            right: 10px;
+            top: 10px; /* Ajustement de la position vers le bas */
+            right: 153px; /* Ajustement de la position vers la droite */
+            background-color: #f2f2f2;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .book {
@@ -164,6 +174,7 @@
             { titre: "Livre 78", auteur: "Auteur 78", image: "livre78.jpg" }
         ];
 
+        // Récupération de l'élément de catalogue
         var catalogueElement = document.getElementById("catalogue");
 
         // Fonction pour afficher les livres
@@ -191,7 +202,7 @@
         // Fonction de filtrage des livres
         function filtrerLivres(recherche) {
             var livresFiltres = livres.filter(function(livre) {
-                return livre.titre.toLowerCase().includes(recherche.toLowerCase());
+                return livre.titre.toLowerCase().includes(recherche.toLowerCase()) || livre.auteur.toLowerCase().includes(recherche.toLowerCase());
             });
             afficherLivres(livresFiltres);
         }
