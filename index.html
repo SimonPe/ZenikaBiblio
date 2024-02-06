@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue de Livres Zenika</title>
+    <link rel="icon" type="image/png" href="logo.png"> <!-- Définition de l'icône de la page -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,6 +22,7 @@
             top: -26px; /* Ajustement de la position vers le haut */
             left: 10px;
             width: 100px; /* Taille du logo */
+            cursor: pointer; /* Ajout d'un curseur pointer pour indiquer que le logo est cliquable */
         }
 
         .search-bar {
@@ -83,7 +85,7 @@
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="Logo" class="logo"> <!-- Logo -->
+    <img src="logo.png" alt="Logo" class="logo" onclick="window.location.reload();"> <!-- Logo avec l'événement de clic pour actualiser la page -->
 
     <input type="text" id="searchInput" class="search-bar" placeholder="Rechercher...">
 
@@ -140,31 +142,31 @@
             { titre: "Libérez votre cerveau!", auteur: "Idriss Aberkane", image: "44.jpg" },
             { titre: "Les Développeurs", auteur: "Paris Chrysos", image: "45.jpg" },
             { titre: "The Negotiation Book", auteur: "Steve Gates", image: "46.jpg" },
-            { titre: "Livre 47", auteur: "Jacques Lecomte", image: "47.jpg" },
-            { titre: "Livre 48", auteur: "Michael E.Gerber", image: "48.jpg" },
-            { titre: "Livre 49", auteur: "Simon Sinek", image: "49.jpg" },
-            { titre: "Livre 50", auteur: "Anne Vermès ", image: "50.jpg" },
-            { titre: "Livre 51", auteur: "Auteur 51", image: "51.jpg" },
-            { titre: "Livre 52", auteur: "Auteur 52", image: "52.jpg" },
-            { titre: "Livre 53", auteur: "Auteur 53", image: "53.jpg" },
-            { titre: "Livre 54", auteur: "Auteur 54", image: "54.jpg" },
-            { titre: "Livre 55", auteur: "Auteur 55", image: "55.jpg" },
-            { titre: "Livre 56", auteur: "Auteur 56", image: "56.jpg" },
-            { titre: "Livre 57", auteur: "Auteur 57", image: "57.jpg" },
-            { titre: "Livre 58", auteur: "Auteur 58", image: "58.jpg" },
-            { titre: "Livre 59", auteur: "Auteur 59", image: "livre59.jpg" },
-            { titre: "Livre 60", auteur: "Auteur 60", image: "livre60.jpg" },
-            { titre: "Livre 61", auteur: "Auteur 61", image: "livre61.jpg" },
-            { titre: "Livre 62", auteur: "Auteur 62", image: "livre62.jpg" },
-            { titre: "Livre 63", auteur: "Auteur 63", image: "livre63.jpg" },
-            { titre: "Livre 64", auteur: "Auteur 64", image: "livre64.jpg" },
-            { titre: "Livre 65", auteur: "Auteur 65", image: "livre65.jpg" },
-            { titre: "Livre 66", auteur: "Auteur 66", image: "livre66.jpg" },
-            { titre: "Livre 67", auteur: "Auteur 67", image: "livre67.jpg" },
-            { titre: "Livre 68", auteur: "Auteur 68", image: "livre68.jpg" },
-            { titre: "Livre 69", auteur: "Auteur 69", image: "livre69.jpg" },
-            { titre: "Livre 70", auteur: "Auteur 70", image: "livre70.jpg" },
-            { titre: "Livre 71", auteur: "Auteur 71", image: "livre71.jpg" },
+            { titre: "Les Entreprises Humanistes", auteur: "Jacques Lecomte", image: "47.jpg" },
+            { titre: "Le Mythe de L'entrepreneur", auteur: "Michael E.Gerber", image: "48.jpg" },
+            { titre: "Pourquoi les vrais leaders se servent en dernier", auteur: "Simon Sinek", image: "49.jpg" },
+            { titre: "Piloter un Projet comme Gustave Eiffel", auteur: "Anne Vermès ", image: "50.jpg" },
+            { titre: "Le Petit Livre Rouge de la Vente", auteur: "Jeffrey Gitomer", image: "51.jpg" },
+            { titre: "Cynefin weaving sense making into the fbric of ou world", auteur: "John Seely Brown", image: "52.jpg" },
+            { titre: "Accélération", auteur: "Nicolas Minvielle", image: "53.jpg" },
+            { titre: "Programming Elixir", auteur: "Dave Thomas", image: "54.jpg" },
+            { titre: "CommitStrip", auteur: "Thomas Gx", image: "55.jpg" },
+            { titre: "Managing Complexity (and chaos) in times of crisis", auteur: "Commission Europénne", image: "56.jpg" },
+            { titre: "Spring par la Pratique", auteur: "Arnaud Cogoluègnes", image: "57.jpg" },
+            { titre: "Agile For Dummies", auteur: "Scott W.Ambler", image: "58.jpg" },
+            { titre: "Livre 59", auteur: "R.dutt", image: "livre59.jpg" },
+            { titre: "Livre 60", auteur: "Dominique Colnet", image: "livre60.jpg" },
+            { titre: "Livre 61", auteur: "Tristan Charvillat", image: "livre61.jpg" },
+            { titre: "Livre 62", auteur: "Eric Ries", image: "livre62.jpg" },
+            { titre: "Livre 63", auteur: "Marilyn Kol", image: "livre63.jpg" },
+            { titre: "Livre 64", auteur: "Cook Book", image: "livre64.jpg" },
+            { titre: "Livre 65", auteur: "Kaizen (Magazine)", image: "livre65.jpg" },
+            { titre: "Livre 66", auteur: "Kaizen (Magazine)", image: "livre66.jpg" },
+            { titre: "Livre 67", auteur: "Anne Scotté", image: "livre67.jpg" },
+            { titre: "Livre 68", auteur: "Kent Beck", image: "livre68.jpg" },
+            { titre: "Livre 69", auteur: "Nicolas Leroux", image: "livre69.jpg" },
+            { titre: "Livre 70", auteur: "Betsy Beyer", image: "livre70.jpg" },
+            { titre: "Livre 71", auteur: "William Stalling", image: "livre71.jpg" },
             { titre: "Livre 72", auteur: "Auteur 72", image: "livre72.jpg" },
             { titre: "Livre 73", auteur: "Auteur 73", image: "livre73.jpg" },
             { titre: "Livre 74", auteur: "Auteur 74", image: "livre74.jpg" },
