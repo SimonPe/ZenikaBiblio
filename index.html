@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,17 +43,107 @@
 
     <h1>Catalogue de Livres</h1>
 
-    <div class="book">
-        <img src="1.jpg" alt="Livre 1">
-        <div class="book-title">Titre du Livre 1</div>
-        <div class="author">Auteur 1</div>
-    </div>
+    <div id="catalogue"></div>
 
-    <div class="book">
-        <img src="2.jpg" alt="Livre 2">
-        <div class="book-title">Titre du Livre 2</div>
-        <div class="author">Auteur 2</div>
-    </div>
+    <script>
+        // Données des livres
+        var livres = [
+            { titre: "Livre 1", auteur: "Auteur 1", image: "livre1.jpg" },
+            { titre: "Livre 2", auteur: "Auteur 2", image: "livre2.jpg" },
+            { titre: "Livre 3", auteur: "Auteur 3", image: "livre3.jpg" },
+            { titre: "Livre 4", auteur: "Auteur 4", image: "livre4.jpg" },
+            { titre: "Livre 5", auteur: "Auteur 5", image: "livre5.jpg" },
+            { titre: "Livre 6", auteur: "Auteur 6", image: "livre6.jpg" },
+            { titre: "Livre 7", auteur: "Auteur 7", image: "livre7.jpg" },
+            { titre: "Livre 8", auteur: "Auteur 8", image: "livre8.jpg" },
+            { titre: "Livre 9", auteur: "Auteur 9", image: "livre9.jpg" },
+            { titre: "Livre 10", auteur: "Auteur 10", image: "livre10.jpg" },
+            { titre: "Livre 11", auteur: "Auteur 11", image: "livre11.jpg" },
+            { titre: "Livre 12", auteur: "Auteur 12", image: "livre12.jpg" },
+            { titre: "Livre 13", auteur: "Auteur 13", image: "livre13.jpg" },
+            { titre: "Livre 14", auteur: "Auteur 14", image: "livre14.jpg" },
+            { titre: "Livre 15", auteur: "Auteur 15", image: "livre15.jpg" },
+            { titre: "Livre 16", auteur: "Auteur 16", image: "livre16.jpg" },
+            { titre: "Livre 17", auteur: "Auteur 17", image: "livre17.jpg" },
+            { titre: "Livre 18", auteur: "Auteur 18", image: "livre18.jpg" },
+            { titre: "Livre 19", auteur: "Auteur 19", image: "livre19.jpg" },
+            { titre: "Livre 20", auteur: "Auteur 20", image: "livre20.jpg" },
+            { titre: "Livre 21", auteur: "Auteur 21", image: "livre21.jpg" },
+            { titre: "Livre 22", auteur: "Auteur 22", image: "livre22.jpg" },
+            { titre: "Livre 23", auteur: "Auteur 23", image: "livre23.jpg" },
+            { titre: "Livre 24", auteur: "Auteur 24", image: "livre24.jpg" },
+            { titre: "Livre 25", auteur: "Auteur 25", image: "livre25.jpg" },
+            { titre: "Livre 26", auteur: "Auteur 26", image: "livre26.jpg" },
+            { titre: "Livre 27", auteur: "Auteur 27", image: "livre27.jpg" },
+            { titre: "Livre 28", auteur: "Auteur 28", image: "livre28.jpg" },
+            { titre: "Livre 29", auteur: "Auteur 29", image: "livre29.jpg" },
+            { titre: "Livre 30", auteur: "Auteur 30", image: "livre30.jpg" },
+            { titre: "Livre 31", auteur: "Auteur 31", image: "livre31.jpg" },
+            { titre: "Livre 32", auteur: "Auteur 32", image: "livre32.jpg" },
+            { titre: "Livre 33", auteur: "Auteur 33", image: "livre33.jpg" },
+            { titre: "Livre 34", auteur: "Auteur 34", image: "livre34.jpg" },
+            { titre: "Livre 35", auteur: "Auteur 35", image: "livre35.jpg" },
+            { titre: "Livre 36", auteur: "Auteur 36", image: "livre36.jpg" },
+            { titre: "Livre 37", auteur: "Auteur 37", image: "livre37.jpg" },
+            { titre: "Livre 38", auteur: "Auteur 38", image: "livre38.jpg" },
+            { titre: "Livre 39", auteur: "Auteur 39", image: "livre39.jpg" },
+            { titre: "Livre 40", auteur: "Auteur 40", image: "livre40.jpg" },
+            { titre: "Livre 41", auteur: "Auteur 41", image: "livre41.jpg" },
+            { titre: "Livre 42", auteur: "Auteur 42", image: "livre42.jpg" },
+            { titre: "Livre 43", auteur: "Auteur 43", image: "livre43.jpg" },
+            { titre: "Livre 44", auteur: "Auteur 44", image: "livre44.jpg" },
+            { titre: "Livre 45", auteur: "Auteur 45", image: "livre45.jpg" },
+            { titre: "Livre 46", auteur: "Auteur 46", image: "livre46.jpg" },
+            { titre: "Livre 47", auteur: "Auteur 47", image: "livre47.jpg" },
+            { titre: "Livre 48", auteur: "Auteur 48", image: "livre48.jpg" },
+            { titre: "Livre 49", auteur: "Auteur 49", image: "livre49.jpg" },
+            { titre: "Livre 50", auteur: "Auteur 50", image: "livre50.jpg" },
+            { titre: "Livre 51", auteur: "Auteur 51", image: "livre51.jpg" },
+            { titre: "Livre 52", auteur: "Auteur 52", image: "livre52.jpg" },
+            { titre: "Livre 53", auteur: "Auteur 53", image: "livre53.jpg" },
+            { titre: "Livre 54", auteur: "Auteur 54", image: "livre54.jpg" },
+            { titre: "Livre 55", auteur: "Auteur 55", image: "livre55.jpg" },
+            { titre: "Livre 56", auteur: "Auteur 56", image: "livre56.jpg" },
+            { titre: "Livre 57", auteur: "Auteur 57", image: "livre57.jpg" },
+            { titre: "Livre 58", auteur: "Auteur 58", image: "livre58.jpg" },
+            { titre: "Livre 59", auteur: "Auteur 59", image: "livre59.jpg" },
+            { titre: "Livre 60", auteur: "Auteur 60", image: "livre60.jpg" },
+            { titre: "Livre 61", auteur: "Auteur 61", image: "livre61.jpg" },
+            { titre: "Livre 62", auteur: "Auteur 62", image: "livre62.jpg" },
+            { titre: "Livre 63", auteur: "Auteur 63", image: "livre63.jpg" },
+            { titre: "Livre 64", auteur: "Auteur 64", image: "livre64.jpg" },
+            { titre: "Livre 65", auteur: "Auteur 65", image: "livre65.jpg" },
+            { titre: "Livre 66", auteur: "Auteur 66", image: "livre66.jpg" },
+            { titre: "Livre 67", auteur: "Auteur 67", image: "livre67.jpg" },
+            { titre: "Livre 68", auteur: "Auteur 68", image: "livre68.jpg" },
+            { titre: "Livre 69", auteur: "Auteur 69", image: "livre69.jpg" },
+            { titre: "Livre 70", auteur: "Auteur 70", image: "livre70.jpg" },
+            { titre: "Livre 71", auteur: "Auteur 71", image: "livre71.jpg" },
+            { titre: "Livre 72", auteur: "Auteur 72", image: "livre72.jpg" },
+            { titre: "Livre 73", auteur: "Auteur 73", image: "livre73.jpg" },
+            { titre: "Livre 74", auteur: "Auteur 74", image: "livre74.jpg" },
+            { titre: "Livre 75", auteur: "Auteur 75", image: "livre75.jpg" },
+            { titre: "Livre 76", auteur: "Auteur 76", image: "livre76.jpg" },
+            { titre: "Livre 77", auteur: "Auteur 77", image: "livre77.jpg" },
+            { titre: "Livre 78", auteur: "Auteur 78", image: "livre78.jpg" }
+        ];
+
+        // Récupération de l'élément de catalogue
+        var catalogueElement = document.getElementById("catalogue");
+
+        // Génération du HTML pour chaque livre
+        livres.forEach(function(livre) {
+            var livreHtml = `
+                <div class="book">
+                    <img src="${livre.image}" alt="${livre.titre}">
+                    <div class="book-title">${livre.titre}</div>
+                    <div class="author">${livre.auteur}</div>
+                </div>
+            `;
+            // Ajout du livre au catalogue
+            catalogueElement.innerHTML += livreHtml;
+        });
+    </script>
 
 </body>
 </html>
