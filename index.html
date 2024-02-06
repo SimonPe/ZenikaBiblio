@@ -9,10 +9,18 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 0;
+            position: relative; /* Positionnement relatif pour que le logo soit positionné par rapport à cet élément */
         }
 
         h1 {
             text-align: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: -16px;
+            left: 10px;
+            width: 100px; /* Taille du logo */
         }
 
         .book {
@@ -26,6 +34,7 @@
 
         .book img {
             max-width: 100%;
+            max-height: 200px; 
             height: auto;
         }
 
@@ -37,9 +46,28 @@
         .author {
             color: #666;
         }
+
+        .borrow-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .borrow-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
+    <img src="logo.png" alt="Logo" class="logo"> <!-- Logo -->
 
     <h1>Catalogue de Livres</h1>
 
@@ -56,15 +84,15 @@
             { titre: "Effective Unit Testing", auteur: "Lasse Koskela", image: "6.jpg" },
             { titre: "The Joy of Clojure", auteur: "Michael Fogus", image: "7.jpg" },
             { titre: "Scala In Depth", auteur: "Joshua D.Duereth", image: "8.jpg" },
-            { titre: "Scala in Action", auteur: "Auteur 9", image: "9.jpg" },
-            { titre: "Oauth 2.0", auteur: "Auteur 10", image: "10.jpg" },
-            { titre: "Livre 11", auteur: "Auteur 11", image: "livre11.jpg" },
-            { titre: "Livre 12", auteur: "Auteur 12", image: "livre12.jpg" },
-            { titre: "Livre 13", auteur: "Auteur 13", image: "livre13.jpg" },
-            { titre: "Livre 14", auteur: "Auteur 14", image: "livre14.jpg" },
-            { titre: "Livre 15", auteur: "Auteur 15", image: "livre15.jpg" },
-            { titre: "Livre 16", auteur: "Auteur 16", image: "livre16.jpg" },
-            { titre: "Livre 17", auteur: "Auteur 17", image: "livre17.jpg" },
+            { titre: "Scala in Action", auteur: "Nilanjan Raychaudhuri", image: "9.jpg" },
+            { titre: "Oauth 2.0", auteur: "Ryan Boyd", image: "10.jpg" },
+            { titre: "Beginning Groovy, Grails and Griffon", auteur: "Vishal Layka", image: "livre11.jpg" },
+            { titre: "Programmation concurrente en Java", auteur: "Brian Goetz", image: "livre12.jpg" },
+            { titre: "Effective Java Second Edition", auteur: " ? ", image: "livre13.jpg" },
+            { titre: "Livre 14", auteur: "Pedro Teixeira", image: "livre14.jpg" },
+            { titre: "Livre 15", auteur: "Raoul Gabriel Urma", image: "livre15.jpg" },
+            { titre: "Livre 16", auteur: "Mike Cantelon", image: "livre16.jpg" },
+            { titre: "Livre 17", auteur: "Alex Young", image: "livre17.jpg" },
             { titre: "Livre 18", auteur: "Auteur 18", image: "livre18.jpg" },
             { titre: "Livre 19", auteur: "Auteur 19", image: "livre19.jpg" },
             { titre: "Livre 20", auteur: "Auteur 20", image: "livre20.jpg" },
@@ -138,11 +166,18 @@
                     <img src="${livre.image}" alt="${livre.titre}">
                     <div class="book-title">${livre.titre}</div>
                     <div class="author">${livre.auteur}</div>
+                    <button class="borrow-button" onclick="emprunter('${livre.titre}')">Emprunter</button>
                 </div>
             `;
             // Ajout du livre au catalogue
             catalogueElement.innerHTML += livreHtml;
         });
+
+        // Fonction pour gérer l'emprunt
+        function emprunter(titreLivre) {
+            // Vous pouvez implémenter ici la logique d'emprunt
+            alert("Vous avez emprunté le livre : " + titreLivre);
+        }
     </script>
 
 </body>
