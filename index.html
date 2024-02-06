@@ -18,9 +18,15 @@
 
         .logo {
             position: absolute;
-            top: -28px;
+            top: -10px; /* Ajustement de la position vers le haut */
             left: 10px;
             width: 100px; /* Taille du logo */
+        }
+
+        .search-bar {
+            position: absolute;
+            top: -10px; /* Ajustement de la position vers le haut */
+            right: 10px;
         }
 
         .book {
@@ -68,6 +74,8 @@
 </head>
 <body>
     <img src="logo.png" alt="Logo" class="logo"> <!-- Logo -->
+
+    <input type="text" id="searchInput" class="search-bar" placeholder="Rechercher...">
 
     <h1>Catalogue de Livres</h1>
 
@@ -156,21 +164,41 @@
             { titre: "Livre 78", auteur: "Auteur 78", image: "livre78.jpg" }
         ];
 
-        // Récupération de l'élément de catalogue
         var catalogueElement = document.getElementById("catalogue");
 
-        // Génération du HTML pour chaque livre
-        livres.forEach(function(livre) {
-            var livreHtml = `
-                <div class="book">
-                    <img src="${livre.image}" alt="${livre.titre}">
-                    <div class="book-title">${livre.titre}</div>
-                    <div class="author">${livre.auteur}</div>
-                    <button class="borrow-button" onclick="emprunter('${livre.titre}')">Emprunter</button>
-                </div>
-            `;
-            // Ajout du livre au catalogue
-            catalogueElement.innerHTML += livreHtml;
+        // Fonction pour afficher les livres
+        function afficherLivres(livres) {
+            catalogueElement.innerHTML = ""; // Effacer le contenu précédent
+
+            // Génération du HTML pour chaque livre
+            livres.forEach(function(livre) {
+                var livreHtml = `
+                    <div class="book">
+                        <img src="${livre.image}" alt="${livre.titre}">
+                        <div class="book-title">${livre.titre}</div>
+                        <div class="author">${livre.auteur}</div>
+                        <button class="borrow-button" onclick="emprunter('${livre.titre}')">Emprunter</button>
+                    </div>
+                `;
+                // Ajout du livre au catalogue
+                catalogueElement.innerHTML += livreHtml;
+            });
+        }
+
+        // Afficher tous les livres au chargement de la page
+        afficherLivres(livres);
+
+        // Fonction de filtrage des livres
+        function filtrerLivres(recherche) {
+            var livresFiltres = livres.filter(function(livre) {
+                return livre.titre.toLowerCase().includes(recherche.toLowerCase());
+            });
+            afficherLivres(livresFiltres);
+        }
+
+        // Gérer les changements dans la barre de recherche
+        document.getElementById("searchInput").addEventListener("input", function() {
+            filtrerLivres(this.value);
         });
 
         // Fonction pour gérer l'emprunt
