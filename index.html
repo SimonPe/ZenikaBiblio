@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue de Livres Zenika</title>
-    <link rel="icon" type="image/png" href="logo.png"> <!-- Définition de l'icône de la page -->
+    <link rel="icon" type="image/png" href="logosite.png"> 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 0;
-            position: relative; /* Positionnement relatif pour que le logo soit positionné par rapport à cet élément */
+            position: relative; 
         }
 
         h1 {
@@ -19,16 +19,16 @@
 
         .logo {
             position: absolute;
-            top: -26px; /* Ajustement de la position vers le haut */
+            top: -26px; 
             left: 10px;
-            width: 100px; /* Taille du logo */
-            cursor: pointer; /* Ajout d'un curseur pointer pour indiquer que le logo est cliquable */
+            width: 100px; 
+            cursor: pointer; 
         }
 
         .search-bar {
             position: absolute;
-            top: 10px; /* Ajustement de la position vers le bas */
-            right: 153px; /* Ajustement de la position vers la droite */
+            top: 10px; 
+            right: 153px; 
             background-color: #f2f2f2;
             border: none;
             padding: 10px;
@@ -94,7 +94,6 @@
     <div id="catalogue"></div>
 
     <script>
-        // Données des livres
         var livres = [
             { titre: "Serveurs Réseau Linux", auteur: "Craig Hunt", image: "1.jpg" },
             { titre: "SQL In a Nutshell", auteur: "Kevin E.Kline", image: "2.jpg" },
@@ -142,9 +141,9 @@
             { titre: "Libérez votre cerveau!", auteur: "Idriss Aberkane", image: "44.jpg" },
             { titre: "Les Développeurs", auteur: "Paris Chrysos", image: "45.jpg" },
             { titre: "The Negotiation Book", auteur: "Steve Gates", image: "46.jpg" },
-            { titre: "Les Entreprises Humanistes", auteur: "Jacques Lecomte", image: "47.jpg" },
-            { titre: "Le Mythe de L'entrepreneur", auteur: "Michael E.Gerber", image: "48.jpg" },
-            { titre: "Pourquoi les vrais leaders se servent en dernier", auteur: "Simon Sinek", image: "49.jpg" },
+            { titre: "Entreprises Humanistes", auteur: "Jacques Lecomte", image: "47.jpg" },
+            { titre: "E - Myth", auteur: "Michael E.Gerber", image: "48.jpg" },
+            { titre: "Leaders prennent dernier", auteur: "Simon Sinek", image: "49.jpg" },
             { titre: "Piloter un Projet comme Gustave Eiffel", auteur: "Anne Vermès ", image: "50.jpg" },
             { titre: "Le Petit Livre Rouge de la Vente", auteur: "Jeffrey Gitomer", image: "51.jpg" },
             { titre: "Cynefin weaving sense making into the fbric of ou world", auteur: "John Seely Brown", image: "52.jpg" },
@@ -176,14 +175,11 @@
             { titre: "Livre 78", auteur: "Auteur 78", image: "livre78.jpg" }
         ];
 
-        // Récupération de l'élément de catalogue
         var catalogueElement = document.getElementById("catalogue");
 
-        // Fonction pour afficher les livres
         function afficherLivres(livres) {
-            catalogueElement.innerHTML = ""; // Effacer le contenu précédent
+            catalogueElement.innerHTML = ""; 
 
-            // Génération du HTML pour chaque livre
             livres.forEach(function(livre) {
                 var livreHtml = `
                     <div class="book">
@@ -193,15 +189,14 @@
                         <button class="borrow-button" onclick="emprunter('${livre.titre}')">Emprunter</button>
                     </div>
                 `;
-                // Ajout du livre au catalogue
                 catalogueElement.innerHTML += livreHtml;
             });
         }
 
-        // Afficher tous les livres au chargement de la page
+
         afficherLivres(livres);
 
-        // Fonction de filtrage des livres
+
         function filtrerLivres(recherche) {
             var livresFiltres = livres.filter(function(livre) {
                 return livre.titre.toLowerCase().includes(recherche.toLowerCase()) || livre.auteur.toLowerCase().includes(recherche.toLowerCase());
@@ -209,14 +204,12 @@
             afficherLivres(livresFiltres);
         }
 
-        // Gérer les changements dans la barre de recherche
+
         document.getElementById("searchInput").addEventListener("input", function() {
             filtrerLivres(this.value);
         });
 
-        // Fonction pour gérer l'emprunt
         function emprunter(titreLivre) {
-            // Vous pouvez implémenter ici la logique d'emprunt
             alert("Vous avez emprunté le livre : " + titreLivre);
         }
     </script>
