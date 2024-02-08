@@ -6,6 +6,24 @@
     <title>Catalogue de Livres Zenika</title>
     <link rel="icon" type="image/png" href="logosite.png"> 
     <style>
+    #footer {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333; 
+    }
+
+    .footer-center {
+        margin: 0 auto;
+    }
+
+    .dark-theme #footer {
+        color: #fff;
+    }
+.dark-theme .modal-content {
+    background-color: #333;
+    color: #fff;
+}
 .modal {
     display: none;
     position: fixed;
@@ -196,6 +214,12 @@
             <button onclick="validerEmprunt()">Valider</button>
         </div>
     </div>
+    <div id="noResultsMessage" style="display: none; text-align: center; margin-top: 20px; font-weight: bold; color: red;">
+        Il n'y a aucun résultat à cette recherche.
+    </div>
+    <div id="footer" class="footer-center">
+        Site créé par Simon Pereira pour Zenika 💖
+    </div>
     <script>
         var livres = [
             { titre: "Serveurs Réseau Linux", auteur: "Craig Hunt", image: "1.jpg" },
@@ -307,7 +331,7 @@
             { titre: "L'économie en Chiffres !", auteur: "Capital", image: "107.jpg" },
             { titre: "Sanctuaire", auteur: "Xavier Dorison", image: "108.jpg" },
             { titre: "Sanctuaire 2", auteur: "Xavier Dorison", image: "109.jpg" },
-            { titre: "Les 500 Meilleurs Albums de tous les temps", auteur: "Steven Van Zandt", image: "110.jpg" },
+            { titre: "Les 500 Meilleurs Albums", auteur: "Steven Van Zandt", image: "110.jpg" },
             { titre: "Diapason Rouge", auteur: "Scouts de France", image: "111.jpg" },
             { titre: "Comme il a changé Nantes", auteur: "Thierry Guidet", image: "112.jpg" },
             { titre: "Le combat des Chefs", auteur: "René Goscinny", image: "113.jpg" },
@@ -315,7 +339,7 @@
             { titre: "Fluide Glacial", auteur: "Diego Aranega", image: "115.jpg" },
             { titre: "Battle Royale 1", auteur: "Koushun Takami", image: "116.jpg" },
             { titre: "Battle Royale 2", auteur: "Koushun Takami", image: "117.jpg" },
-            { titre: "Battle Royale 3", auteur: "Koushun Takami", image: "11sh8.jpg" },
+            { titre: "Battle Royale 3", auteur: "Koushun Takami", image: "118.jpg" },
             { titre: "Battle Royale 4", auteur: "Koushun Takami", image: "119.jpg" },
             { titre: "Battle Royale 5", auteur: "Koushun Takami", image: "120.jpg" },
             { titre: "Battle Royale 6", auteur: "Koushun Takami", image: "121.jpg" },
@@ -328,37 +352,36 @@
             { titre: "Battle Royale 13", auteur: "Koushun Takami", image: "128.jpg" },
             { titre: "Battle Royale 14", auteur: "Koushun Takami", image: "129.jpg" },
             { titre: "Battle Royale 15", auteur: "Koushun Takami", image: "130.jpg" },
-            { titre: "Guide du Big Data", auteur: "Marion Peaudecerf", image: "131.jpg" },
-            { titre: "MicroServices For Java developers", auteur: "Christian Posta", image: "132.jpg" },
+            { titre: "Guide du Big Data", auteur: "Marion Peaudecerf", image: "131.jfif" },
+            { titre: "MicroServices For Java", auteur: "Christian Posta", image: "132.jfif" },
             { titre: "Google Analytics", auteur: "Ronan Chardonneau", image: "133.jpg" },
-            { titre: "Professional NoSql", auteur: "Shashank Tiwari", image: "134.jpg" },
-            { titre: "Software Testing And Analysis", auteur: "Mauro Pezzé", image: "135.jpg" },
-            { titre: "MédiasCopie du Vocabulaire Anglais", auteur: "Florent Gusdorf", image: "136.jpg" },
-            { titre: "Rich Web Applications With Spring", auteur: "Michael Isuy", image: "137.jpg" },
-            { titre: "Le Tech: On en Fait trop ?", auteur: "Gaelle Ottan", image: "138.jpg" },
-            { titre: "La Tech vas t'elle sauver ou tuer La démocratie ?", auteur: "Kevin Bresson", image: "139.jpg" },
+            { titre: "Professional NoSql", auteur: "Shashank Tiwari", image: "134.jfif" },
+            { titre: "Software Testing", auteur: "Mauro Pezzé", image: "135.jfif" },
+            { titre: "Vocabulaire Anglais", auteur: "Florent Gusdorf", image: "136.jpg" },
+            { titre: "Rich Web Applications", auteur: "Michael Isuy", image: "137.jpg" },
+            { titre: "L'ia vas Tuer ?", auteur: "Kevin Bresson", image: "139.jpg" },
             { titre: "Kubernetes Security", auteur: "Liz Rice", image: "140.jpg" },
-            { titre: "Eloquent Ruby", auteur: "Obie Fernander", image: "141.jpg" },
-            { titre: "Les Nouveaux horizons du PLM", auteur: "Pierre Audoin Consultants", image: "142.jpg" },
-            { titre: "Apache Maven", auteur: "Nicolas de Loof", image: "143.jpg" },
+            { titre: "Eloquent Ruby", auteur: "Obie Fernander", image: "141.jfif" },
+            { titre: "Les Nouveaux horizons du PLM", auteur: "Pierre Audoin Consultants", image: "142.webp" },
+            { titre: "Apache Maven", auteur: "Nicolas de Loof", image: "143.webp" },
             { titre: "Angular In Action", auteur: "Jeremy Wilken", image: "144.jpg" },
-            { titre: "De la Performance à l'excellence", auteur: "Jim Collins", image: "145.jpg" },
-            { titre: "Optimisation des bases de données", auteur: "Laurent Navarro", image: "146.jpg" },
-            { titre: "Professional Cloud Architect Study guide", auteur: "Dan Sullivan", image: "147.jpg" },
-            { titre: "Associate Cloud Engineer Study Guide", auteur: "Dan Sullivan", image: "148.jpg" },
-            { titre: "La Règles ? Pas de Règles !", auteur: "Reed Hastings", image: "149.jpg" },
+            { titre: "Performance/Excellence", auteur: "Jim Collins", image: "145.jpg" },
+            { titre: "Opti des données", auteur: "Laurent Navarro", image: "146.jpg" },
+            { titre: "Professional Cloud", auteur: "Dan Sullivan", image: "147.jfif" },
+            { titre: "Associate Cloud Engineer", auteur: "Dan Sullivan", image: "148.jpg" },
+            { titre: "La Règles ?", auteur: "Reed Hastings", image: "149.jpg" },
             { titre: "Image Optimization", auteur: "Addy Osmani", image: "150.jpg" },
-            { titre: "Accelerate", auteur: "Nicole Forsgren", image: "151.jpg" },
+            { titre: "Accelerate", auteur: "Nicole Forsgren", image: "151.jfif" },
             { titre: "Programmer en Java", auteur: "Claude Delannoy", image: "152.jpg" },
             { titre: "AngularJs In Action", auteur: "Lukas Ruebbelke", image: "153.jpg" },
-            { titre: "Java Concurrency in Practice", auteur: "Brian Goetz", image: "154.jpg" },
-            { titre: "Scrum, Le guide pratique de la méthode agile ", auteur: "Claude Aubry", image: "155.jpg" },
-            { titre: "Rapid Development", auteur: "Steve McConnell", image: "156.jpg" },
-            { titre: "Latex", auteur: "Christian Rolland", image: "157.jpg" },
+            { titre: "Java Concurrency", auteur: "Brian Goetz", image: "154.jfif" },
+            { titre: "Scrum, Le guide pratique ", auteur: "Claude Aubry", image: "155.jpg" },
+            { titre: "Rapid Development", auteur: "Steve McConnell", image: "156.jfif" },
+            { titre: "Latex", auteur: "Christian Rolland", image: "157.jfif" },
             { titre: "L'homme Chevreuil", auteur: "Geoffroy Delorme", image: "158.jpg" },
-            { titre: "Signals and Boundaries", auteur: "John H. Holland", image: "159.jpg" },
-            { titre: "Obliquity", auteur: "John Kay", image: "160.jpg" },
-            { titre: "Bios Dépannage et Optimisation de PC", auteur: "Olivier Pavie", image: "161.jpg" },
+            { titre: "Signals and Boundaries", auteur: "John H. Holland", image: "159.jfif" },
+            { titre: "Obliquity", auteur: "John Kay", image: "160.jfif" },
+            { titre: "Dépannage et Opti", auteur: "Olivier Pavie", image: "161.jpg" },
             { titre: "Green It", auteur: "Margerie Guillot", image: "162.jpg" },
             { titre: "JavaScript: Developpez Efficacement", auteur: "Alexandre Brillant", image: "163.jpg" }
         ];
@@ -366,20 +389,31 @@
         var catalogueElement = document.getElementById("catalogue");
 
         function afficherLivres(livres) {
-            catalogueElement.innerHTML = ""; 
+    catalogueElement.innerHTML = "";
 
-            livres.forEach(function(livre) {
-                var livreHtml = `
-                    <div class="book">
-                        <img src="${livre.image}" alt="${livre.titre}">
-                        <div class="book-title">${livre.titre}</div>
-                        <div class="author">${livre.auteur}</div>
-                        <button class="borrow-button" onclick="emprunter('${livre.titre}')">Emprunter</button>
-                    </div>
-                `;
-                catalogueElement.innerHTML += livreHtml;
-            });
-        }
+    if (livres.length === 0) {
+        document.getElementById("noResultsMessage").style.display = "block";
+    } else {
+        livres.forEach(function (livre) {
+            var estEmprunte = livre.emprunte;
+            var boutonEmprunterTexte = estEmprunte ? 'Non Dispo' : 'Emprunter';
+            var boutonEmprunterCouleur = estEmprunte ? 'red' : '#4CAF50';
+
+            var livreHtml = `
+                <div class="book ${document.body.classList.contains('dark-theme') ? 'dark-theme' : ''}">
+                    <img src="${livre.image}" alt="${livre.titre}">
+                    <div class="book-title">${livre.titre}</div>
+                    <div class="author">${livre.auteur}</div>
+                    <button class="borrow-button" onclick="emprunter('${livre.titre}')" style="background-color: ${boutonEmprunterCouleur}" ${estEmprunte ? 'disabled' : ''}>${boutonEmprunterTexte}</button>
+                </div>
+            `;
+            catalogueElement.innerHTML += livreHtml;
+        });
+
+        document.getElementById("noResultsMessage").style.display = "none"; 
+    }
+}
+
 
 
         afficherLivres(livres);
@@ -398,21 +432,42 @@
         });
 
         function emprunter(titreLivre) {
-            var modal = document.getElementById("modal");
-            modal.style.display = "block";
-        }
+  fetch('/emprunter', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ titre: titreLivre }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert(data.message);
+        afficherLivres(livres); 
+      } else {
+        alert(data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Erreur lors de la demande d\'emprunt:', error);
+      alert('Une erreur s\'est produite lors de la demande d\'emprunt.');
+    });
+}
 
         function toggleTheme() {
-            const body = document.body;
-            const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-            const newTheme = currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
+        const body = document.body;
+        const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+        const newTheme = currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
 
-            body.classList.remove(currentTheme);
-            body.classList.add(newTheme);
+        body.classList.remove(currentTheme);
+        body.classList.add(newTheme);
 
-            const themeIcon = document.getElementById('themeIcon');
-            themeIcon.src = newTheme === 'light-theme' ? 'moon.png' : 'sun.png';
-            themeIcon.alt = newTheme === 'light-theme' ? 'Sun Icon' : 'Moon Icon';
+        const themeIcon = document.getElementById('themeIcon');
+        themeIcon.src = newTheme === 'light-theme' ? 'moon.png' : 'sun.png';
+        themeIcon.alt = newTheme === 'light-theme' ? 'Sun Icon' : 'Moon Icon';
+
+        const footer = document.getElementById('footer');
+        footer.classList.toggle('dark-theme', newTheme === 'dark-theme');
         }
         function closeModal() {
             var modal = document.getElementById("modal");
