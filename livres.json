@@ -43,9 +43,9 @@
     "titre": "Effective Unit Testing",
     "auteur": "Lasse Koskela",
     "image": "6.jpg",
-    "disponible": true,
-    "dateRetour": "2024-02-09T14:19:15.358Z",
-    "emprunteur": "Cuoc"
+    "disponible": false,
+    "dateRetour": "2024-02-09T17:12:52.550Z",
+    "emprunteur": "Clair"
   },
   {
     "titre": "The Joy of Clojure",
@@ -630,9 +630,9 @@
     "titre": "Vue Report Amsterdam",
     "auteur": "?",
     "image": "89.jpg",
-    "disponible": false,
+    "disponible": true,
     "dateRetour": "2024-02-09T15:44:24.128Z",
-    "emprunteur": "Simon Pereira et Théo Piou"
+    "emprunteur": "Simon"
   },
   {
     "titre": "Camel In Action",
