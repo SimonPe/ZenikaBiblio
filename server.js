@@ -17,18 +17,24 @@ app.get('/livres', (req, res) => {
 });
 
 app.post('/emprunter', (req, res) => {
-  const { titre } = req.body;
-
+  const { titre, emprunteur, duree } = req.body;
   const livreIndex = livres.findIndex(livre => livre.titre === titre);
 
   if (livreIndex !== -1 && livres[livreIndex].disponible) {
-    livres[livreIndex].disponible = false;
+      const dureeEnSecondes = parseInt(duree);
 
-    fs.writeFileSync('./livres.json', JSON.stringify(livres, null, 2));
+      const dateRetour = new Date();
+      dateRetour.setSeconds(dateRetour.getSeconds() + dureeEnSecondes);
 
-    res.json({ success: true, message: 'Livre emprunté avec succès.' });
+      livres[livreIndex].disponible = false;
+      livres[livreIndex].emprunteur = emprunteur;
+      livres[livreIndex].dateRetour = dateRetour;
+
+      fs.writeFileSync('./livres.json', JSON.stringify(livres, null, 2));
+
+      res.json({ success: true, message: 'Livre emprunté avec succès.' });
   } else {
-    res.status(400).json({ success: false, message: 'Livre non disponible.' });
+      res.json({ success: false, message: 'Le livre n\'est pas disponible.' });
   }
 });
 

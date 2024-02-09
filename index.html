@@ -13,6 +13,9 @@
         color: #333; 
     }
 
+    .borrow-button.unavailable {
+    background-color: red;
+}
     .footer-center {
         margin: 0 auto;
     }
@@ -145,6 +148,19 @@
             width: 200px;
             text-align: center;
         }
+        .book {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease;  
+}
+
+.book:hover {
+    transform: scale(1.04);  
+}
 
         .book img {
             max-width: 100%;
@@ -191,6 +207,9 @@
         <img id="themeIcon" src="moon.png" alt="Moon Icon" onclick="toggleTheme()">
     </div>
 
+
+    <div id="emprunt-info-${livre.titre}" class="emprunt-info"></div>
+
     <div id="catalogue"></div>
 
     <div id="modal" class="modal">
@@ -200,7 +219,6 @@
             <input type="text" id="nom" name="nom" required>
             <label for="duree">Durée:</label>
             <select id="duree" name="duree" required>
-                <option value="0">1/2 jours</option>
                 <option value="1">1 jours</option>
                 <option value="2">2 jours</option>
                 <option value="3">3 jours</option>
@@ -211,7 +229,7 @@
                 <option value="21">21 jours</option>
                 <option value="30">30 jours</option>
             </select>
-            <button onclick="validerEmprunt()">Valider</button>
+            <button id="validerButton" onclick="validerEmprunt()">Valider</button>
         </div>
     </div>
     <div id="noResultsMessage" style="display: none; text-align: center; margin-top: 20px; font-weight: bold; color: red;">
@@ -395,26 +413,36 @@
         document.getElementById("noResultsMessage").style.display = "block";
     } else {
         livres.forEach(function (livre) {
-            var estEmprunte = livre.emprunte;
+            var estEmprunte = livre.disponible === false; 
             var boutonEmprunterTexte = estEmprunte ? 'Non Dispo' : 'Emprunter';
             var boutonEmprunterCouleur = estEmprunte ? 'red' : '#4CAF50';
+
+            var empruntInfo = '';
+            if (estEmprunte) {
+                empruntInfo = `Emprunté par ${livre.emprunteur}`;
+            }
 
             var livreHtml = `
                 <div class="book ${document.body.classList.contains('dark-theme') ? 'dark-theme' : ''}">
                     <img src="${livre.image}" alt="${livre.titre}">
                     <div class="book-title">${livre.titre}</div>
                     <div class="author">${livre.auteur}</div>
-                    <button class="borrow-button" onclick="emprunter('${livre.titre}')" style="background-color: ${boutonEmprunterCouleur}" ${estEmprunte ? 'disabled' : ''}>${boutonEmprunterTexte}</button>
+                    <button class="borrow-button" data-titre="${livre.titre}" onclick="ouvrirModal('${livre.titre}')" style="background-color: ${boutonEmprunterCouleur}" ${estEmprunte ? 'disabled' : ''}>${boutonEmprunterTexte}</button>
+                    
+                    <!-- Ajoutez cette ligne pour afficher les informations d'emprunt -->
+                    <div class="emprunt-info">${empruntInfo}</div>
                 </div>
             `;
             catalogueElement.innerHTML += livreHtml;
         });
 
-        document.getElementById("noResultsMessage").style.display = "none"; 
+        document.getElementById("noResultsMessage").style.display = "none";
     }
 }
 
-
+document.addEventListener('DOMContentLoaded', function() {
+        updateLivres();
+    });
 
         afficherLivres(livres);
 
@@ -432,29 +460,73 @@
         });
 
         function emprunter(titreLivre) {
-  fetch('/emprunter', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ titre: titreLivre }),
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        alert(data.message);
-        afficherLivres(livres); 
-      } else {
-        alert(data.message);
-      }
-    })
-    .catch(error => {
-      console.error('Erreur lors de la demande d\'emprunt:', error);
-      alert('Une erreur s\'est produite lors de la demande d\'emprunt.');
+    var livreEmprunte = livres.find(function(livre) {
+        return livre.titre === titreLivre && livre.disponible === false;
     });
+
+    if (livreEmprunte) {
+        alert("Livre déjà emprunté par " + livreEmprunte.emprunteur + "");
+    } else {
+        fetch('/emprunter', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ titre: titreLivre }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                fetch('/livres')
+                    .then(response => response.json())
+                    .then(updatedLivres => {
+                        livres = updatedLivres;
+                        afficherLivres(livres);
+                    });
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Erreur lors de la demande d\'emprunt:', error);
+            alert('Une erreur s\'est produite lors de la demande d\'emprunt.');
+        });
+    }
 }
 
-        function toggleTheme() {
+setInterval(updateLivres, 15000);
+
+function afficherMessageEmprunteur(emprunteur, duree) {
+    alert("Livre déjà emprunté par " + emprunteur + ". Il sera disponible dans " + duree + " jours.");
+}
+
+function updateLivres()  {
+    fetch('/livres')
+                    .then(response => response.json())
+                    .then(updatedLivres => {
+                        livres = updatedLivres;
+                        afficherLivres(livres);
+                    });
+    }
+
+    function ouvrirModal(titre) {
+    var livre = livres.find(l => l.titre === titre);
+
+    if (livre && !livre.disponible) {
+        alert("Livre déjà emprunté par " + livre.emprunteur + ". Il sera disponible dans " + livre.duree + " jours.");
+    } else {
+        var modal = document.getElementById("modal");
+        modal.style.display = "block";
+
+        document.getElementById("nom").value = "";
+
+        document.getElementById("duree").value = "";
+
+        document.getElementById("validerButton").setAttribute("data-titre-livre", titre);
+    }
+}       
+function toggleTheme() {
         const body = document.body;
         const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
         const newTheme = currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
@@ -475,11 +547,37 @@
         }
 
         function validerEmprunt() {
-            var nom = document.getElementById("nom").value;
-            var duree = document.getElementById("duree").value;
-            alert("Livre emprunté par " + nom + " pour une durée de " + duree + " jours.");
-        closeModal();
-       }
+    var nom = document.getElementById("nom").value;
+    var duree = document.getElementById("duree").value;
+    var titreLivre = document.getElementById("validerButton").getAttribute("data-titre-livre");
+
+    fetch('/emprunter', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ titre: titreLivre, emprunteur: nom, duree: duree }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            fetch('/livres')
+                .then(response => response.json())
+                .then(updatedLivres => {
+                    livres = updatedLivres;
+                    afficherLivres(livres);
+                });
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erreur lors de la demande d\'emprunt:', error);
+        alert('Une erreur s\'est produite lors de la demande d\'emprunt.');
+    });
+}
+
     </script>
 
 </body>

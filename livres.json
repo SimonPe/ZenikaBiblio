@@ -3,972 +3,1146 @@
     "titre": "Serveurs Réseau Linux",
     "auteur": "Craig Hunt",
     "image": "1.jpg",
-    "disponible": false
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:49:06.505Z",
+    "emprunteur": "Théo Coucou"
   },
   {
     "titre": "SQL In a Nutshell",
     "auteur": "Kevin E.Kline",
     "image": "2.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:51:48.288Z",
+    "emprunteur": "rgg"
   },
   {
     "titre": "Programmation Shell",
     "auteur": "Christine Deffaix Rémy",
     "image": "3.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:59:05.161Z",
+    "emprunteur": "g"
   },
   {
     "titre": "HTML 5",
     "auteur": "Jean Pierre Vincent ",
     "image": "4.jpg",
-    "disponible": false
+    "disponible": false,
+    "dateRetour": "2024-02-09T15:30:22.028Z",
+    "emprunteur": "Simon"
   },
   {
     "titre": "AngularJs",
     "auteur": "Brad Green",
     "image": "5.jpg",
-    "disponible": false
+    "disponible": false,
+    "dateRetour": "2024-02-09T17:08:12.290Z",
+    "emprunteur": "Théo"
   },
   {
     "titre": "Effective Unit Testing",
     "auteur": "Lasse Koskela",
     "image": "6.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:19:15.358Z",
+    "emprunteur": "Cuoc"
   },
   {
     "titre": "The Joy of Clojure",
     "auteur": "Michael Fogus",
     "image": "7.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:19:35.181Z",
+    "emprunteur": "irgrg"
   },
   {
     "titre": "Scala In Depth",
     "auteur": "Joshua D.Duereth",
     "image": "8.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:21:44.381Z",
+    "emprunteur": "dd"
   },
   {
     "titre": "Scala in Action",
     "auteur": "Nilanjan Raychaudhuri",
     "image": "9.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:25:59.702Z",
+    "emprunteur": "wjvd"
   },
   {
     "titre": "Oauth 2.0",
     "auteur": "Ryan Boyd",
     "image": "10.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:49:45.967Z",
+    "emprunteur": "Théo"
   },
   {
     "titre": "Beginning Groovy, Grails",
     "auteur": "Vishal Layka",
     "image": "11.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Programmation Java",
     "auteur": "Brian Goetz",
     "image": "12.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": "2024-02-09T14:50:00.988Z",
+    "emprunteur": "Théo"
   },
   {
     "titre": "Effective Java",
     "auteur": "Joshua Bloch",
     "image": "13.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Professional Node.js",
     "auteur": "Pedro Teixeira",
     "image": "14.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Java 8 in Action",
     "auteur": "Raoul Gabriel Urma",
     "image": "15.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Node.js in Action",
     "auteur": "Mike Cantelon",
     "image": "16.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Node.js in Practice",
     "auteur": "Alex Young",
     "image": "17.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Making Software",
     "auteur": "Andy Oram",
     "image": "18.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "NASA Systems",
     "auteur": "La Nasa",
     "image": "19.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Puce Sécurisé",
     "auteur": "Misc",
     "image": "20.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Sécurité Système/Logiciel",
     "auteur": "Misc",
     "image": "21.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Sécurité Des Réseaux IP",
     "auteur": "Misc",
     "image": "22.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Sécurité du Cloud",
     "auteur": "Misc",
     "image": "23.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Outils Python",
     "auteur": "Misc",
     "image": "24.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Zero Trust",
     "auteur": "Misc",
     "image": "25.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Sécurité de Kubernetes",
     "auteur": "Misc",
     "image": "26.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Dev le code est à vous !",
     "auteur": "Programmez!",
     "image": "27.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Deno, Nouveau back-end",
     "auteur": "Programmez!",
     "image": "28.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Go, Nouveau Language",
     "auteur": "Programmez!",
     "image": "29.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Informatique Quantique",
     "auteur": "Programmez!",
     "image": "30.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Nouveautés Python 3.8",
     "auteur": "Programmez!",
     "image": "31.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Développeur Freelance",
     "auteur": "Programmez!",
     "image": "32.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Slim 4",
     "auteur": "Programmez!",
     "image": "33.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Spécial .net 5",
     "auteur": "Programmez!",
     "image": "34.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Conference Handbook",
     "auteur": "OSMI",
     "image": "35.png",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Développez plus VITE",
     "auteur": "Windev",
     "image": "36.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Générer vos codes",
     "auteur": "Programmez!",
     "image": "37.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Programmer en C",
     "auteur": "Claude Delannoy",
     "image": "38.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "AngularJs Up & Running",
     "auteur": "Shyam Seshadri",
     "image": "39.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "MongoDB",
     "auteur": "Kristina Chodorow",
     "image": "40.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Solution Focus",
     "auteur": "Géry Derbier",
     "image": "41.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Turn the Ship Around",
     "auteur": "L. David Marquet",
     "image": "42.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "La bible de la Négociation",
     "auteur": "Alexis Kyprianou",
     "image": "43.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Libérez votre cerveau!",
     "auteur": "Idriss Aberkane",
     "image": "44.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Les Développeurs",
     "auteur": "Paris Chrysos",
     "image": "45.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "The Negotiation Book",
     "auteur": "Steve Gates",
     "image": "46.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Entreprises Humanistes",
     "auteur": "Jacques Lecomte",
     "image": "47.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "E - Myth",
     "auteur": "Michael E.Gerber",
     "image": "48.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Leaders prennent dernier",
     "auteur": "Simon Sinek",
     "image": "49.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Projet comme Eiffel",
     "auteur": "Anne Vermès ",
     "image": "50.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Le Petit Livre de la Vente",
     "auteur": "Jeffrey Gitomer",
     "image": "51.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Cynefin weaving sense",
     "auteur": "John Seely Brown",
     "image": "52.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Accélération",
     "auteur": "Nicolas Minvielle",
     "image": "53.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Programming Elixir",
     "auteur": "Dave Thomas",
     "image": "54.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "CommitStrip",
     "auteur": "Thomas Gx",
     "image": "55.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Managing Complexity",
     "auteur": "Commission Europénne",
     "image": "56.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Spring par la Pratique",
     "auteur": "Arnaud Cogoluègnes",
     "image": "57.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Agile For Dummies",
     "auteur": "Scott W.Ambler",
     "image": "58.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Radical Product Thinking",
     "auteur": "R.dutt",
     "image": "59.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Eiffel, Smart Eiffel",
     "auteur": "Dominique Colnet",
     "image": "60.png",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Discovery Discipline",
     "auteur": "Tristan Charvillat",
     "image": "61.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Lean Startup",
     "auteur": "Eric Ries",
     "image": "62.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Facilitateur d'un Jour",
     "auteur": "Marilyn Kol",
     "image": "63.png",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Je Batch Cook",
     "auteur": "Cook Book",
     "image": "64.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Travaillez et Entreprendre",
     "auteur": "Kaizen",
     "image": "65.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Numérique Responsable",
     "auteur": "Kaizen",
     "image": "66.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Un monde D'esclaves",
     "auteur": "Anne Scotté",
     "image": "67.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "SmallTalk Best Practice",
     "auteur": "Kent Beck",
     "image": "68.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Play for Java",
     "auteur": "Nicolas Leroux",
     "image": "69.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "The Site Reliability",
     "auteur": "Betsy Beyer",
     "image": "70.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Network Security",
     "auteur": "William Stalling",
     "image": "71.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "IPv6",
     "auteur": "Gisèle Gizault",
     "image": "72.webp",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Cloud Foundry",
     "auteur": "Duncan C. E. Winn",
     "image": "73.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Manuel de Survie",
     "auteur": "Denis Migot",
     "image": "74.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Apprendre le JavaScript",
     "auteur": "Christian Vignouroux",
     "image": "75.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Cours de Programmation",
     "auteur": "Martine Gautier",
     "image": "76.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Mathématiques Discrètes",
     "auteur": "Pierre Marchaud",
     "image": "77.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Exterminateur 1",
     "auteur": "Bilal Dionnet",
     "image": "78.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Exterminateur 2",
     "auteur": "Bilal Dionnet",
     "image": "79.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Exterminateur 3",
     "auteur": "Bilal Dionnet",
     "image": "80.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Exterminateur 4",
     "auteur": "Bilal Dionnet",
     "image": "81.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Startup Scaleup Screwup",
     "auteur": "Jurgen Appelo",
     "image": "82.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Stop Starting !",
     "auteur": "Lean Kanban University",
     "image": "83.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Psykocat",
     "auteur": "Mimika",
     "image": "84.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Product Academy",
     "auteur": "Thiga et Xebia",
     "image": "85.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Niourk",
     "auteur": "Olivier Vatine",
     "image": "86.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Gringo",
     "auteur": "Osamu Tezuka",
     "image": "87.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Nouvelles 2",
     "auteur": "Hiroki Endo",
     "image": "88.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Vue Report Amsterdam",
     "auteur": "?",
     "image": "89.jpg",
-    "disponible": true
+    "disponible": false,
+    "dateRetour": "2024-02-09T15:44:24.128Z",
+    "emprunteur": "Simon Pereira et Théo Piou"
   },
   {
     "titre": "Camel In Action",
     "auteur": "Claus Ibsen",
     "image": "90.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Notes",
     "auteur": "Boulet",
     "image": "91.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Notes 2",
     "auteur": "Boulet",
     "image": "92.jpeg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "France Rugby Collection",
     "auteur": "Panini",
     "image": "93.png",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Numérique avec des mots ",
     "auteur": "Google",
     "image": "94.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Numéro d'été 2023",
     "auteur": "Programmez!",
     "image": "95.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Spécial Python",
     "auteur": "Programmez!",
     "image": "96.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Billy Bat 1",
     "auteur": "Naoki Urasawa",
     "image": "97.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Billy Bat 2",
     "auteur": "Naoki Urasawa",
     "image": "98.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Billy Bat 3",
     "auteur": "Naoki Urasawa",
     "image": "99.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Green IT et accéssibilité",
     "auteur": "Hervé Boisgontier",
     "image": "100.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Rupture Douce",
     "auteur": "Laurent Sarrazin",
     "image": "101.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Georges Clooney",
     "auteur": "Philippe Valette",
     "image": "102.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Georges Clooney 2",
     "auteur": "Philippe Valette",
     "image": "103.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Les Penseurs Influents",
     "auteur": "Le Point",
     "image": "104.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "OpenVPN Killer ?",
     "auteur": "Tristan Colombo",
     "image": "105.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Harvard Business Review",
     "auteur": "HbrFrancen",
     "image": "106.png",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "L'économie en Chiffres !",
     "auteur": "Capital",
     "image": "107.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Sanctuaire",
     "auteur": "Xavier Dorison",
     "image": "108.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Sanctuaire 2",
     "auteur": "Xavier Dorison",
     "image": "109.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Les 500 Meilleurs Albums",
     "auteur": "Steven Van Zandt",
     "image": "110.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Diapason Rouge",
     "auteur": "Scouts de France",
     "image": "111.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Comme il a changé Nantes",
     "auteur": "Thierry Guidet",
     "image": "112.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Le combat des Chefs",
     "auteur": "René Goscinny",
     "image": "113.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "La Zizanie",
     "auteur": "René Goscinny",
     "image": "114.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Fluide Glacial",
     "auteur": "Diego Aranega",
     "image": "115.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 1",
     "auteur": "Koushun Takami",
     "image": "116.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 2",
     "auteur": "Koushun Takami",
     "image": "117.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 3",
     "auteur": "Koushun Takami",
     "image": "118.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 4",
     "auteur": "Koushun Takami",
     "image": "119.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 5",
     "auteur": "Koushun Takami",
     "image": "120.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 6",
     "auteur": "Koushun Takami",
     "image": "121.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 7",
     "auteur": "Koushun Takami",
     "image": "122.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 8",
     "auteur": "Koushun Takami",
     "image": "123.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 9",
     "auteur": "Koushun Takami",
     "image": "124.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 10",
     "auteur": "Koushun Takami",
     "image": "125.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 11",
     "auteur": "Koushun Takami",
     "image": "126.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 12",
     "auteur": "Koushun Takami",
     "image": "127.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 13",
     "auteur": "Koushun Takami",
     "image": "128.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 14",
     "auteur": "Koushun Takami",
     "image": "129.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Battle Royale 15",
     "auteur": "Koushun Takami",
     "image": "130.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Guide du Big Data",
     "auteur": "Marion Peaudecerf",
     "image": "131.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "MicroServices For Java",
     "auteur": "Christian Posta",
     "image": "132.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Google Analytics",
     "auteur": "Ronan Chardonneau",
     "image": "133.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Professional NoSql",
     "auteur": "Shashank Tiwari",
     "image": "134.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Software Testing",
     "auteur": "Mauro Pezzé",
     "image": "135.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Vocabulaire Anglais",
     "auteur": "Florent Gusdorf",
     "image": "136.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Rich Web Applications",
     "auteur": "Michael Isuy",
     "image": "137.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "L'ia vas Tuer ?",
     "auteur": "Kevin Bresson",
     "image": "139.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Kubernetes Security",
     "auteur": "Liz Rice",
     "image": "140.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Eloquent Ruby",
     "auteur": "Obie Fernander",
     "image": "141.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Les Nouveaux horizons du PLM",
     "auteur": "Pierre Audoin Consultants",
     "image": "142.webp",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Apache Maven",
     "auteur": "Nicolas de Loof",
     "image": "143.webp",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Angular In Action",
     "auteur": "Jeremy Wilken",
     "image": "144.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Performance/Excellence",
     "auteur": "Jim Collins",
     "image": "145.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Opti des données",
     "auteur": "Laurent Navarro",
     "image": "146.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Professional Cloud",
     "auteur": "Dan Sullivan",
     "image": "147.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Associate Cloud Engineer",
     "auteur": "Dan Sullivan",
     "image": "148.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "La Règles ?",
     "auteur": "Reed Hastings",
     "image": "149.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Image Optimization",
     "auteur": "Addy Osmani",
     "image": "150.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Accelerate",
     "auteur": "Nicole Forsgren",
     "image": "151.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Programmer en Java",
     "auteur": "Claude Delannoy",
     "image": "152.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "AngularJs In Action",
     "auteur": "Lukas Ruebbelke",
     "image": "153.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Java Concurrency",
     "auteur": "Brian Goetz",
     "image": "154.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Scrum, Le guide pratique",
     "auteur": "Claude Aubry",
     "image": "155.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Rapid Development",
     "auteur": "Steve McConnell",
     "image": "156.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Latex",
     "auteur": "Christian Rolland",
     "image": "157.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "L'homme Chevreuil",
     "auteur": "Geoffroy Delorme",
     "image": "158.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Signals and Boundaries",
     "auteur": "John H. Holland",
     "image": "159.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Obliquity",
     "auteur": "John Kay",
     "image": "160.jfif",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Dépannage et Opti",
     "auteur": "Olivier Pavie",
     "image": "161.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "Green It",
     "auteur": "Margerie Guillot",
     "image": "162.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   },
   {
     "titre": "JavaScript: Developpez Efficacement",
     "auteur": "Alexandre Brillant",
     "image": "163.jpg",
-    "disponible": true
+    "disponible": true,
+    "dateRetour": null
   }
 ]
