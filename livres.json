@@ -5,7 +5,7 @@
     "image": "1.jpg",
     "disponible": true,
     "dateRetour": "2024-02-09T14:49:06.505Z",
-    "emprunteur": "Théo Coucou"
+    "emprunteur": ""
   },
   {
     "titre": "SQL In a Nutshell",
@@ -13,15 +13,15 @@
     "image": "2.jpg",
     "disponible": true,
     "dateRetour": "2024-02-09T14:51:48.288Z",
-    "emprunteur": "rgg"
+    "emprunteur": ""
   },
   {
     "titre": "Programmation Shell",
     "auteur": "Christine Deffaix Rémy",
     "image": "3.jpg",
     "disponible": true,
-    "dateRetour": "2024-02-09T14:59:05.161Z",
-    "emprunteur": "g"
+    "dateRetour": "2024-02-09T17:28:59.381Z",
+    "emprunteur": ""
   },
   {
     "titre": "HTML 5",
@@ -43,9 +43,9 @@
     "titre": "Effective Unit Testing",
     "auteur": "Lasse Koskela",
     "image": "6.jpg",
-    "disponible": false,
+    "disponible": true,
     "dateRetour": "2024-02-09T17:12:52.550Z",
-    "emprunteur": "Clair"
+    "emprunteur": ""
   },
   {
     "titre": "The Joy of Clojure",
@@ -61,7 +61,7 @@
     "image": "8.jpg",
     "disponible": true,
     "dateRetour": "2024-02-09T14:21:44.381Z",
-    "emprunteur": "dd"
+    "emprunteur": ""
   },
   {
     "titre": "Scala in Action",
@@ -69,7 +69,7 @@
     "image": "9.jpg",
     "disponible": true,
     "dateRetour": "2024-02-09T14:25:59.702Z",
-    "emprunteur": "wjvd"
+    "emprunteur": ""
   },
   {
     "titre": "Oauth 2.0",
@@ -77,7 +77,7 @@
     "image": "10.jpg",
     "disponible": true,
     "dateRetour": "2024-02-09T14:49:45.967Z",
-    "emprunteur": "Théo"
+    "emprunteur": ""
   },
   {
     "titre": "Beginning Groovy, Grails",
